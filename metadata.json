@@ -1,0 +1,5 @@
+{
+  "name": "LINE Data Extractor AI",
+  "description": "แอปพลิเคชันสำหรับสกัดข้อมูลตัวเลขจากข้อความ LINE OA หลากหลายรูปแบบโดยอัตโนมัติด้วย Gemini AI เพื่อส่งออกไปยัง Google Sheet/SAP",
+  "requestFramePermissions": []
+}
