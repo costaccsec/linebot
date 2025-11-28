@@ -2,8 +2,15 @@ import { GoogleGenAI, Type, Schema } from "@google/genai";
 import { ExtractedItem } from "../types";
 
 // Initialize Gemini Client
-// Note: API Key must be set in Environment Variables in Vercel
-const ai = new GoogleGenAI({ apiKey: process.env.API_KEY });
+// IMPORTANT: For Client-side (React/Vite), we must use import.meta.env.VITE_API_KEY
+// process.env is not available in the browser by default.
+const apiKey = import.meta.env.VITE_API_KEY;
+
+if (!apiKey) {
+  console.warn("Missing VITE_API_KEY. Manual extraction might fail.");
+}
+
+const ai = new GoogleGenAI({ apiKey: apiKey || '' });
 
 const responseSchema: Schema = {
   type: Type.OBJECT,
