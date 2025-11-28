@@ -2,9 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { 
   Bot, 
   FileSpreadsheet, 
-  ArrowRight, 
   Loader2, 
-  CheckCircle2, 
   RefreshCw,
   Clock,
   Zap,
